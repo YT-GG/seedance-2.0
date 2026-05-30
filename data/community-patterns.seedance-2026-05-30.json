@@ -1,7 +1,7 @@
 {
   "schema_version": "seedance-community-patterns.v1",
-  "generated_at": "2026-05-27",
-  "source": "external-awesome-seedance-2-prompts local checkout plus open web community guides",
+  "generated_at": "2026-05-30",
+  "source": "external-awesome-seedance-2-prompts local checkout plus open web community guides; May 30 pass rechecked for structure, not raw prompt import",
   "usage_rule": "Mine structure, vocabulary, timing syntax, and constraints only. Do not copy unsafe or IP-sensitive prompts into active examples.",
   "labels": [
     "safe-example-candidate",

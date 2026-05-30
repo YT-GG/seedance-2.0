@@ -66,9 +66,9 @@ def main() -> int:
         if "Seedance 2.0 Pro" in text and "ambiguous" not in text.lower():
             errors.append("Seedance 2.0 Pro appears without an ambiguity correction")
 
-    data_path = root / "data" / "sources.seedance-2026-05-27.json"
+    data_path = root / "data" / "sources.seedance-2026-05-30.json"
     if not data_path.exists():
-        errors.append("missing data/sources.seedance-2026-05-27.json")
+        errors.append("missing data/sources.seedance-2026-05-30.json")
     else:
         try:
             data = json.loads(data_path.read_text(encoding="utf-8"))

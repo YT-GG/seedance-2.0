@@ -1,6 +1,6 @@
 # Community Source Methodology
 
-last_verified: 2026-05-27
+last_verified: 2026-05-30
 
 Use this when mining prompt corpora, forums, Reddit posts, Chinese guides, Russian guides, or wrapper documentation.
 

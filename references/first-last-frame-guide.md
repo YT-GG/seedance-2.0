@@ -1,8 +1,10 @@
 # First/Last Frame Guide
 
-last_verified: 2026-05-27
+last_verified: 2026-05-30
 
 Use this guide for FLF2V, first-frame/last-frame transitions, Chinese `首帧/尾帧`, or requests to generate the motion between two images.
+
+Source boundary: official ByteDance material supports multimodal references, editing, extension, and R2V examples. The exact `FLF2V` workflow name should be treated as partner/surface-specific unless the active first-party API surface explicitly exposes it.
 
 ## Core Principle
 

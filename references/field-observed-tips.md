@@ -1,6 +1,6 @@
 # Field-Observed Tips
 
-last_verified: 2026-05-27
+last_verified: 2026-05-30
 
 These are practitioner patterns gathered from public community material. Treat them as field-observed, not official platform guarantees.
 

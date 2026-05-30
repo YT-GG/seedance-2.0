@@ -6,9 +6,9 @@
 
 Text-to-video · Image-to-video · Video-to-video · Reference-to-video · Audio-aware prompting · Copyright-safe rewrites · Agent Skills
 
-[![Version](https://img.shields.io/badge/version-5.4.0-111827?labelColor=0f172a)](#changelog)
+[![Version](https://img.shields.io/badge/version-5.4.1-111827?labelColor=0f172a)](#changelog)
 [![Skills](https://img.shields.io/badge/sub--skills-23-0ea5e9?labelColor=0f172a)](#skill-map)
-[![References](https://img.shields.io/badge/references-28-8b5cf6?labelColor=0f172a)](#reference-library)
+[![References](https://img.shields.io/badge/references-29-8b5cf6?labelColor=0f172a)](#reference-library)
 [![Evals](https://img.shields.io/badge/evals-33-22c55e?labelColor=0f172a)](#validation)
 [![License](https://img.shields.io/badge/license-MIT-f59e0b?labelColor=0f172a)](LICENSE)
 
@@ -16,7 +16,7 @@ Author: [Iamemily2050 (@iamemily2050)](https://github.com/Emily2040) · [Instagr
 
 Platform context: [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0) · [Dreamina](https://dreamina.capcut.com) · [Jimeng](https://jimeng.jianying.com) · [BytePlus ModelArk](https://docs.byteplus.com/en/docs/ModelArk/2291680)
 
-Updated: **2026-05-27** · **v5.4.0 research refresh, CN/RU deepening, FLF2V workflow, and source-freshness release**
+Updated: **2026-05-30** · **v5.4.1 final source sweep, agent compatibility notes, and infographic polish**
 
 ---
 
@@ -25,6 +25,19 @@ Updated: **2026-05-27** · **v5.4.0 research refresh, CN/RU deepening, FLF2V wor
 Seedance 2.0 Skill OS is a modular agent-skill package for directing Seedance 2.0 video generations. It is built around a simple principle: **direct the model, do not micro-manage the frame**.
 
 The repository gives an AI assistant a public, auditable operating system for Seedance work. It defines when to interview, when to write a compact prompt, when to load a technical reference, when to rewrite unsafe IP content, and when to troubleshoot a bad generation.
+
+## What This Skill Does
+
+This skill package turns Seedance 2.0 work into a repeatable assistant workflow:
+
+- Routes vague ideas into short creative interviews instead of premature prompt dumps.
+- Writes full or compressed prompts for T2V, I2V, V2V, R2V, audio-aware, and first/last-frame workflows.
+- Separates every reference asset by role: identity, environment, motion, camera rhythm, audio tempo, style, or endpoint.
+- Keeps model and platform claims source-dated so API, pricing, region, quota, and model-ID details are not guessed.
+- Provides multilingual cinematic vocabulary in Chinese, Japanese, Korean, Spanish, and Russian.
+- Rewrites unsafe celebrity, protected IP, private-person, brand, logo, song, or voice requests into safer creative equivalents.
+- Diagnoses failed outputs with concrete repair levers: camera, lighting, motion, reference role, duration, framing, audio, or safety wording.
+- Ships validation scripts, eval cases, source data, and design checks so maintainers can review changes before release.
 
 ## Start Here
 
@@ -38,21 +51,34 @@ The repository gives an AI assistant a public, auditable operating system for Se
 | “It failed or looks bad.” | [`seedance-troubleshoot`](skills/seedance-troubleshoot/SKILL.md) | A root-cause diagnosis and repaired prompt. |
 | “This uses a character, brand, celebrity, or real person.” | [`seedance-copyright`](skills/seedance-copyright/SKILL.md) | A safer rewrite preserving the creative function. |
 | “Is this Seedance Pro/Fast/V2?” | [`model-name-map`](references/model-name-map.md) | Source-dated naming and surface caveats. |
+| “I am installing or reviewing this as an agent skill.” | [`agent-compatibility`](references/agent-compatibility.md) | Codex/Agent Skills structure and distribution notes. |
 
 ## Current Status Rule
 
 Seedance platform behavior changes quickly. Before making factual claims about API availability, face or portrait authorization, upload limits, pricing, regional availability, or model names, load [`references/api-status.md`](references/api-status.md) and check its `last_verified` date.
 
-As of 2026-05-27, public official sources describe Seedance 2.0 as supporting text, image, audio, and video inputs. Official launch material says references can include up to 9 images, 3 video clips, and 3 audio clips, and can guide composition, camera language, motion rhythm, visual effects, and sound. Access, pricing, model IDs, upload limits, regions, and authorization requirements remain surface-specific.
+As of 2026-05-30, public official sources describe Seedance 2.0 as supporting text, image, audio, and video inputs. Official launch and model-card material says references can include up to 9 images, 3 video clips, and 3 audio clips. Volcengine's May 29 tutorial keeps `doubao-seedance-2-0-260128` and `doubao-seedance-2-0-fast-260128` visible as current Ark model IDs, but access, pricing, upload limits, regions, and authorization requirements remain surface-specific.
 
 ## Research Snapshot
 
-The v5.4 release adds a dated research layer for safer data mining and platform claims:
+The v5.4 release line adds a dated research layer for safer data mining and platform claims:
 
-- [`research-2026-05-27.md`](references/research-2026-05-27.md) records official and field-observed signals.
+- [`research-2026-05-30.md`](references/research-2026-05-30.md) records official and field-observed signals.
 - [`platform-surface-matrix.md`](references/platform-surface-matrix.md) separates model capability from Dreamina/Jimeng, Volcengine/Ark, BytePlus, ComfyUI, and wrapper behavior.
 - [`model-name-map.md`](references/model-name-map.md) prevents `Seedance 2.0`, `Seedance 2.0 Fast`, `Seedance V2`, and ambiguous Pro labels from being mixed together.
 - [`community-source-methodology.md`](references/community-source-methodology.md) explains how to mine public prompt corpora without copying unsafe examples.
+
+## Operating System At A Glance
+
+![Seedance 2.0 Skill OS infographic: source registry, prompt router, multimodal references, safety gates, and eval loop](assets/skill-os-infographic.png)
+
+The visual map is intentionally text-light so it remains clean in GitHub and reusable in docs. It represents the five lanes this package keeps separate:
+
+- Research sources: dated official, academic, platform, and community evidence.
+- Prompt router: interview, prompt writing, compression, recipes, and troubleshooting.
+- Multimodal references: image, video, audio, first-frame, last-frame, and role-bound assets.
+- Safety gates: IP, likeness, voice, brand, real-person, filter, and platform-policy checks.
+- Quality evals: schema checks, source freshness, vocabulary integrity, design audit, and behavior cases.
 
 ## Skill Map
 
@@ -105,7 +131,8 @@ The v5.4 release adds a dated research layer for safer data mining and platform 
 |---|---|
 | [`api-status.md`](references/api-status.md) | Current dated platform and API status. |
 | [`source-registry.md`](references/source-registry.md) | Source hierarchy and evidence labels. |
-| [`research-2026-05-27.md`](references/research-2026-05-27.md) | Dated source and field-observation snapshot. |
+| [`research-2026-05-30.md`](references/research-2026-05-30.md) | Dated source and field-observation snapshot. |
+| [`agent-compatibility.md`](references/agent-compatibility.md) | Agent Skills structure, Codex compatibility, and packaging notes. |
 | [`platform-surface-matrix.md`](references/platform-surface-matrix.md) | Model-vs-surface claim boundaries. |
 | [`model-name-map.md`](references/model-name-map.md) | Seedance naming, Fast variant, and Pro-label caveats. |
 | [`first-last-frame-guide.md`](references/first-last-frame-guide.md) | FLF2V, first-frame, and last-frame prompting. |
@@ -134,13 +161,15 @@ The v5.4 release adds a dated research layer for safer data mining and platform 
 
 ## Install
 
-Client support for Agent Skills is still tool-specific. If your client supports installing a skill directly from a GitHub repository, use this repository URL:
+Client support for Agent Skills is still tool-specific. Codex documents a skill as a directory with a required `SKILL.md`, optional `scripts/`, `references/`, `assets/`, and optional `agents/` metadata. It also distinguishes local skill authoring from plugins, which are the installable distribution unit for reusable skills and apps. This repository follows the skill-folder shape at the root and keeps dense facts in references so the active skill stays small.
+
+If your client supports installing a skill directly from a GitHub repository, use this repository URL:
 
 ```text
 https://github.com/Emily2040/seedance-2.0
 ```
 
-For manual installation, copy this repository into the skill directory used by your agent client. The directory name should match the root skill name, `seedance-20`.
+For manual installation, copy this repository into the skill directory used by your agent client. The directory name should match the root skill name, `seedance-20`. Treat the table below as common local targets to verify in your own client, not a universal support guarantee.
 
 | Platform | Typical workspace path |
 |---|---|
@@ -168,11 +197,11 @@ The CI workflow runs the same checks on push and pull request.
 
 ## Design Standard
 
-The v5.4 front page uses a generated cinematic bitmap hero plus the cleaned v5.2 information architecture. The README should stay readable in GitHub mobile, dark mode, and narrow widths. SVG assets must include `<title>` and `<desc>` elements, use internal CSS only, and avoid external fonts or scripts. See [`docs/frontend-redesign.md`](docs/frontend-redesign.md).
+The v5.4 front page uses a generated cinematic bitmap hero, a generated operating-system infographic, and the cleaned v5.2 information architecture. The README should stay readable in GitHub mobile, dark mode, and narrow widths. SVG assets must include `<title>` and `<desc>` elements, use internal CSS only, and avoid external fonts or scripts. See [`docs/frontend-redesign.md`](docs/frontend-redesign.md).
 
 ## Changelog
 
-See [`CHANGELOG.md`](CHANGELOG.md). Current release: **v5.4.0**.
+See [`CHANGELOG.md`](CHANGELOG.md). Current release: **v5.4.1**.
 
 ## License
 
