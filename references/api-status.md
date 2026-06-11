@@ -1,7 +1,7 @@
 # Seedance 2.0 API and Platform Status
 
-last_verified: 2026-05-30
-confidence: public-source snapshot as of the verification date; not a guarantee of access, pricing, model IDs, upload limits, authorization behavior, or regional availability on every surface
+last_verified: 2026-06-10
+confidence: public-source snapshot as of the verification date; per-section dates apply where noted (fal section verified 2026-06-09, earlier surface sections verified 2026-05-30); not a guarantee of access, pricing, model IDs, upload limits, authorization behavior, or regional availability on every surface
 
 ## Confirmed From Public Sources
 
@@ -22,6 +22,17 @@ confidence: public-source snapshot as of the verification date; not a guarantee 
 - Runway's official Seedance 2 API guide documents model `seedance2`, 5-15 second duration, image/video/audio references, upload handling through `runway://`, audio-combination rules, and SDK-type lag for `referenceAudio`.
 - Partner workflow docs such as ComfyUI expose T2V, R2V, and FLF2V workflow vocabulary, but those docs are surface-specific.
 - Recent AV-generation benchmark papers, including AVBench and VABench, are useful for eval vocabulary around audio-video consistency, but they are not Seedance platform-access sources.
+
+## fal — Authorized Provider, Global *(added 2026-06-10; last verified 2026-06-09)*
+
+**Endpoints:** `text-to-video`, `image-to-video` (start image + optional `end_image_url` for A→B), `reference-to-video` — each with a `/fast` tier.
+**Duration:** 4–15s or `auto` (model sizes to prompt complexity; multi-shot → longer). **Aspect:** 21:9 / 16:9 / 4:3 / 1:1 / 3:4 / 9:16 / auto.
+**Params:** `prompt`, `image_url`, `end_image_url`, `resolution`, `duration`, `aspect_ratio`, `generate_audio` (default on; **audio included at no extra generation cost**), `seed` (**reproducibility aid, not a hard lock** — output may vary even with the same seed).
+**References (r2v):** @Image×9, @Video×3, @Audio×3, ≤12 files. Images JPEG/PNG/WebP ≤30 MB; videos 480–720p, combined ≤15s, <50 MB total; audio MP3/WAV ≤15 MB each, combined ≤15s; **audio requires ≥1 image or video.**
+**Resolution — open conflict:** fal's prose guide states 480p/720p only; the model + pricing pages list **1080p (~$0.682/s)** and the r2v example uses `resolution: "1080p"`. Verify per endpoint at call time.
+**Pricing (verify live before quoting):** 720p standard ≈$0.30/s · fast ≈$0.24/s · video-reference ×0.6 · 1080p ≈$0.682/s.
+**Prompting:** prose direction; `Shot 1:/Shot 2:` labels for multi-shot; r2v docs also accept timestamp pacing phrases as secondary hints. **Fast tier is unreliable for multi-shot / slow-mo / dolly.**
+**No extend endpoint** — extend is a Dreamina-app feature; on fal, chain image-to-video from the previous clip's last frame.
 
 ## Operational Wording
 
@@ -44,7 +55,7 @@ See [`model-name-map.md`](model-name-map.md).
 - Say that API availability, pricing, model IDs, upload limits, entitlement rules, rate limits, and regional availability must be checked against current primary sources.
 - Avoid claiming that an API is globally available or unavailable unless a current primary source says so.
 - Avoid claiming that face or portrait uploads are universally supported or universally blocked unless a current primary source says so.
-- Separate model capability from product-surface behavior. Dreamina/Jimeng, Doubao, Volcengine/Ark, BytePlus/ModelArk, ComfyUI, and third-party wrappers can differ.
+- Separate model capability from product-surface behavior. Dreamina/Jimeng, Doubao, Volcengine/Ark, BytePlus/ModelArk, ComfyUI, fal, and third-party wrappers can differ.
 - Treat third-party wrapper prices and model aliases as wrapper-specific, not official.
 
 ## Known Limit Categories

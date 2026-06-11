@@ -14,6 +14,7 @@ Use this file when a user says "Seedance Pro", "Seedance V2", "Seed2.0 Pro", or 
 | `doubao-seedance-2-0-260128` | Volcengine Ark model ID observed in May 29 tutorial | Useful for implementation examples only after rechecking the active console/docs. Do not treat as universal BytePlus/global availability. |
 | `doubao-seedance-2-0-fast-260128` | Volcengine Ark Fast model ID observed in May 29 tutorial | Use only when the active surface exposes the Fast variant and current pricing/limits are checked. |
 | `seedance2` | Runway API model ID | Use only for Runway's API surface. Do not substitute for Volcengine/Doubao model IDs. |
+| fal Seedance 2.0 endpoints | fal's hosted Seedance 2.0 surface: `text-to-video`, `image-to-video`, `reference-to-video`, each with a `/fast` tier | Use fal endpoint naming only for the fal surface (verified 2026-06-09). Recheck endpoint IDs, resolution tiers, and per-second pricing live before quoting. Do not substitute for Volcengine, Doubao, or Runway model IDs. |
 | Seedance V2 | Community shorthand | Normalize to Seedance 2.0 unless the user is clearly referring to a wrapper-specific model. |
 | Seedance 2.0 Pro | Ambiguous community shorthand | Do not assume this is an official video-model name. Ask which surface, or normalize to Seedance 2.0 / Fast with a caveat. |
 | Seed2.0 Pro | Separate Seed/Doubao naming seen outside the Seedance video model line | Do not confuse with Seedance 2.0 video generation. |
