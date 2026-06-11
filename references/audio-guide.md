@@ -39,6 +39,15 @@ Use separate speaker turns when reliability matters. For two-person exchanges, g
 
 `[Audio1] provides tempo only. On each downbeat: back wall light pulses once, dancer hits one pose, camera remains locked wide.` Use visible beat changes rather than asking the model to understand an abstract groove.
 
+## Audio as clock
+
+Field-observed technique; test before promising results. Beyond mood and tempo, `[Audio1]` can act as the master clock of the edit: `cut on the beat of [Audio1]; the turn lands on the drop; the door slams on the final hit.`
+
+- Tie each musical landmark to exactly one visible event - a cut, a pose, a light change, an object landing. One event per beat; stacked events smear.
+- Works best with a single strong rhythm (clean drums, a metronomic pulse). Dense mixes or rubato material give the model no clock to follow.
+- When the audio is the clock, make it the only clock: mute video references and avoid second timing systems such as timestamp lists in the same prompt.
+- The clock works inside one generation only; audio is not continuous across calls, so multi-clip pieces get their unifying score in post.
+
 ## Troubleshooting
 
 - Desync: shorten dialogue, stabilize camera, remove head motion, reduce competing sound, and clean source audio role.

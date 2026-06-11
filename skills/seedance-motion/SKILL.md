@@ -10,7 +10,7 @@ tags:
   - seedance-20
 metadata:
   version: "5.4.5"
-  updated: "2026-05-30"
+  updated: "2026-06-11"
   parent: "seedance-20"
   author: "Iamemily2050 (@iamemily2050)"
   repository: "https://github.com/Emily2040/seedance-2.0"
@@ -36,6 +36,10 @@ State: actor/object, action, force level, timing, physical consequence, continui
 | Choreography | `Character B ducks under the swinging bag, pivots left, and stops in a guarded stance` | `fast action fight scene` |
 | Object physics | `paper receipt lifts in the fan breeze, flips once, and lands face-up` | `papers move dynamically` |
 | Environmental motion | `rain streaks diagonally across the backlight while puddle ripples spread from footsteps` | `stormy weather atmosphere` |
+
+## Physics-Forward Pattern
+
+Official material claims strong physics; extract it by writing causes and letting the model compute consequences (field-observed emphasis - test before promising results). State mass, force, and material, then name one consequence the camera can see: `the heavy oak door swings shut and the candle flames bend toward it` beats `the door closes dramatically`. Consequences prove the action: weight shows in landing compression, momentum in overshoot and recovery, friction in skid length, wind in what it displaces. One physical cause with two or three visible consequences reads stronger than three separate actions.
 
 ## Timing Pattern
 

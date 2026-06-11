@@ -48,6 +48,15 @@ Constraints: no new text, no watermark, no identity change, no object redesign.
 
 `[Image1] is the first frame and [Image2] is the last frame. Preserve the original character's face structure, hairstyle, jacket, and room layout. The character slowly stands from the chair, turns toward the window, and stops in the final pose. Camera: locked medium shot with a slight push-in. Lighting: same cool window light, warmer lamp glow at the end. Sound: quiet room tone and soft floor creak.`
 
+## Transformation Method
+
+Field-observed technique; test before promising results. Transformations succeed when the prompt names the two endpoint states plus the persisting carrier - the element that survives the change and carries continuity: a logo, a silhouette, a light source, a camera position.
+
+- State A, state B, and the carrier: `the paper crane unfolds into a flat sheet; the red wax seal stays fixed at center frame throughout.`
+- Let the carrier own the eye-line: the viewer tracks the unchanged element while everything around it transforms, which hides intermediate-frame weirdness.
+- Hard cases decompose into first/last-frame steps: generate A → carrier-stable midpoint, then midpoint → B as a second FLF2V pass, and cut them together.
+- Match-cut variant: hold the carrier's screen position and scale across the cut and let the surroundings swap.
+
 ## Common Failures
 
 | Failure | Repair |

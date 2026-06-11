@@ -42,6 +42,16 @@ Before writing prompt prose, assign every uploaded asset a role. Role mapping pr
 | First-last frame | `[Image1] is first frame; [Image2] is target end frame; transition occurs through light sweep, not product deformation.` |
 | Edit/extend | `[Video1] is the source clip; preserve subject and camera path, replace only the failed lighting beat from 3s to 5s.` |
 
+## Motion Transfer
+
+Field-observed technique; test before promising results. Probably the most under-used reference capability: a donor video drives choreography or camera rhythm while an image keeps identity.
+
+- Pair one donor `[Video1]` with one identity anchor `[Image1]`, and write the exclusion explicitly: `[Video1] controls the choreography only - nothing of its appearance, performer, costume, room, or logo transfers.`
+- Pick donor clips with one clear action, a clean silhouette, and a steady camera. Busy multi-person footage transfers noise, not motion.
+- Mute the donor clip before upload unless its sound should drive timing; if it keeps sound, state which reference owns the clock.
+- Transfers well: choreography, gesture timing, camera rhythm, blocking. Transfers poorly: fine hand detail, multi-person sync, facial performance.
+- Use only owned, licensed, stock, mocap, rehearsal, or self-recorded donor footage; real-person donors transfer general motion only, never likeness.
+
 ## Template
 
 `[Image1] controls product identity. [Video1] controls camera pace only. [Audio1] controls tempo only. Preserve the subject from [Image1]; do not copy characters, logos, music, voice, or environment from [Video1]/[Audio1].`
