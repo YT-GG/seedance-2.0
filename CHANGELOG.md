@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented here.
 
+## [5.5.2] — 2026-06-12
+
+### Changed
+
+- Deep-proofread release. Swept every markdown, script, vector, and data file for misspellings (90-word lexicon), doubled words, double periods, trailing whitespace, space-before-punctuation, markdown table column mismatches, YAML frontmatter validity, and font-declaration consistency. One defect existed in the repository: a leftover font-weight 500 on the operating diagram's caption class - unified to 400 so all three vector assets share a single weight.
+- Bumped active skill metadata, validator expectations, and eval metadata to v5.5.2.
+
 ## [5.5.1] — 2026-06-12
 
 ### Added

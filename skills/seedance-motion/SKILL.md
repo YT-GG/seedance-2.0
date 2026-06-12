@@ -9,7 +9,7 @@ tags:
   - physics
   - seedance-20
 metadata:
-  version: "5.5.1"
+  version: "5.5.2"
   updated: "2026-06-12"
   parent: "seedance-20"
   author: "Iamemily2050 (@iamemily2050)"

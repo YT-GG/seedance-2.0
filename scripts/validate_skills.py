@@ -16,7 +16,7 @@ EXPECTED_SKILLS = [
     "seedance-vocab-ko", "seedance-vocab-ru", "seedance-vocab-zh",
 ]
 
-EXPECTED_VERSION = "5.5.1"
+EXPECTED_VERSION = "5.5.2"
 
 REQUIRED_REFERENCES = [
     "references/api-status.md",
