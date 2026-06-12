@@ -2,6 +2,20 @@
 
 All notable changes to this project are documented here.
 
+## [5.4.9] — 2026-06-12
+
+### Added
+
+- Added `references/model-mechanics.md`: a working mental model of the generator in eight mechanisms (attention budget, distribution pull, no-NOT, trajectory prior, compounding error, reference dominance, area-scaled detail, joint audio-video), a novel-case derivation method with a worked example, and a mechanism-indexed diagnosis table wired into `seedance-troubleshoot` — labeled internal reasoning, never architecture claims.
+- Added the soul layer: a root Soul section (hear the intent behind the words; keep a story state alive across the conversation so users never repeat a decision; evolve register with the user) and a distinct Intent section in all 24 sub-skills.
+- Added eval case for novel-case mechanism reasoning with honest-uncertainty assertions (60 protected cases).
+
+### Changed
+
+- Kept Russian dialogue support explicitly field-observed: the multi-language dialogue claim is attributed to Russian-language coverage, not the official pages, per the repo's claim-boundary rules.
+- Routed unknown failures in `seedance-troubleshoot` through mechanism-based diagnosis; cross-linked the capability map to the mechanics.
+- Trued README badges (46 references, 60 evals) and bumped active skill metadata, validator expectations, and eval metadata to v5.4.9.
+
 ## [5.4.8] — 2026-06-12
 
 ### Added

@@ -9,7 +9,7 @@ tags:
   - brief
   - seedance-20
 metadata:
-  version: "5.4.8"
+  version: "5.4.9"
   updated: "2026-06-12"
   parent: "seedance-20"
   author: "Iamemily2050 (@iamemily2050)"
