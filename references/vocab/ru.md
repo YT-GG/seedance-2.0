@@ -65,7 +65,7 @@ Use this reference for Russian Seedance prompt wording, role binding, and compac
 
 ## Russian Dialogue Notes
 
-Field-observed from Russian community testing (Habr, vc.ru); test per surface, never promise results. Official material lists Russian among supported dialogue languages, but long Russian phrases are a reported weak spot.
+Field-observed from Russian community testing (Habr, vc.ru); test per surface, never promise results. Russian-language coverage reports multi-language dialogue support including Russian, but the official ByteDance pages in the source registry do not enumerate dialogue languages - treat Russian dialogue as field-observed, and long Russian phrases as a reported weak spot.
 
 | Rule | Practice |
 |---|---|
