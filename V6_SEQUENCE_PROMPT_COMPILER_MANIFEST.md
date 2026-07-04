@@ -2,10 +2,10 @@
 
 ## Current Patch
 
-- Active package version: `6.5.0`.
-- Patch scope: felt intent - a per-clip `felt_intent` field (the directing engine's intention made persistent in state) threaded through the clip contract, compiler compile order and compression priority, continuity QC boundary check, continuation gates, capsule, schemas, and validators, with a pre-generation intent echo.
+- Active package version: `6.6.0`.
+- Patch scope: closing the sequence loop - the Observation Fast Path with a frame-extraction tool (`scripts/extract_last_frame.py`) so the agent, not the user, fills the observation record; a State Lifecycle with compaction rules for long projects; and `references/sequence-worked-trace.md`, the prose end-to-end trace around the machine fixtures.
 - Current expected active sub-skills: 28.
-- Current expected eval cases: 124.
+- Current expected eval cases: 126.
 
 ## Baseline
 
@@ -116,11 +116,11 @@ git diff --check
 
 ## Release Acceptance Results
 
-Final full-suite run on 2026-07-04 (v6.5.0 felt-intent release):
+Final full-suite run on 2026-07-04 (v6.6.0 loop-closing release):
 
-- `python scripts/validate_skills.py --strict`: pass; root plus 28 sub-skills and required v6.5.0 files.
+- `python scripts/validate_skills.py --strict`: pass; root plus 28 sub-skills and required v6.6.0 files.
 - `python scripts/content_audit.py --strict`: pass; active content clean, migrated archived warnings remain warning-only.
-- `python scripts/eval_schema_check.py --strict`: pass; 124 eval cases.
+- `python scripts/eval_schema_check.py --strict`: pass; 126 eval cases.
 - `python scripts/design_audit.py --strict`: pass.
 - `python scripts/source_registry_check.py --strict`: pass.
 - `python scripts/vocab_schema_check.py --strict`: pass.

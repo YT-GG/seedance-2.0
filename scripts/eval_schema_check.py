@@ -131,6 +131,8 @@ REQUIRED_IDS = {
     "audio_reference_lipsync_non_english",
     "scene_layer_caps_extension_chain",
     "felt_intent_survives_compression",
+    "observed_state_from_attached_frame",
+    "capsule_compaction_long_project",
 }
 
 

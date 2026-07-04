@@ -16,7 +16,7 @@ EXPECTED_SKILLS = [
     "seedance-vocab-ko", "seedance-vocab-ru", "seedance-vocab-zh",
 ]
 
-EXPECTED_VERSION = "6.5.0"
+EXPECTED_VERSION = "6.6.0"
 
 REQUIRED_REFERENCES = [
     "references/api-status.md",
@@ -71,6 +71,7 @@ REQUIRED_REFERENCES = [
     "references/event-density.md",
     "references/continuity-qc.md",
     "references/failure-atlas.md",
+    "references/sequence-worked-trace.md",
     "references/vocab/en.md",
     "references/vocab/zh.md",
     "references/vocab/ja.md",
@@ -98,6 +99,7 @@ REQUIRED_FILES = [
     "scripts/behavior_contract_check.py",
     "scripts/sequence_eval_check.py",
     "scripts/generation_run_check.py",
+    "scripts/extract_last_frame.py",
     ".github/workflows/validate-skills.yml",
     "agents/openai.yaml",
     "evals/evals.json",
@@ -304,6 +306,7 @@ def main() -> int:
         "scripts/behavior_contract_check.py",
         "scripts/sequence_eval_check.py",
         "scripts/generation_run_check.py",
+    "scripts/extract_last_frame.py",
     ]:
         path = root / rel
         if path.exists():

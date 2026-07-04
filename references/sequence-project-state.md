@@ -98,3 +98,18 @@ ALLOWED CHANGES:
 RESERVED FUTURE BEATS:
 EXTENSION DEPTH:
 UNRESOLVED UNCERTAINTIES:
+
+## State Lifecycle
+
+The state is append-heavy by nature - every take review adds detail - so a thirty-clip project needs compaction rules, or by clip 25 every session begins by re-pasting a monster.
+
+File convention (for agents with a persistent workspace such as Claude Code or Codex): keep `project-state.json` as the machine truth and regenerate the readable capsule from it; never hand-maintain the same fact in two places. Archive the take log to a separate `take-log.md` (or `take-history.jsonl`) instead of letting `take_history` grow inside the working state.
+
+Compaction rules:
+
+- A **completed scene compresses to one line** in the scene map and the capsule: scene id, one-line outcome, and the accepted final frame it handed off. Its clip-level detail stays in the JSON and the archived take log, not in the capsule.
+- **Full detail is kept only for the current scene** plus the immediately previous accepted clip - everything a continuation prompt can actually use.
+- **Superseded takes** (rejected, or accepted-then-replaced) move to the archive on scene close; canon keeps only each clip's accepted review.
+- The **capsule stays under roughly 40 lines**. If it is longer, something that should have been compacted was not.
+
+`state_revision` bumps on every canon change - an accepted take, an accepted deviation, a re-anchor, a scene close, or a lock change - and the capsule is regenerated at the same moment. A capsule whose revision does not match the JSON is stale; trust the JSON.

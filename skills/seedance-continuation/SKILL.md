@@ -9,7 +9,7 @@ tags:
   - continuity
   - seedance-20
 metadata:
-  version: "6.5.0"
+  version: "6.6.0"
   updated: "2026-07-04"
   parent: "seedance-20"
   author: "Iamemily2050 (@iamemily2050)"
@@ -48,7 +48,9 @@ Before writing any continuation prompt, require:
 - exact reference registry;
 - active surface or conservative surface profile.
 
-If the source is unavailable, say: "I have the story plan, but I do not have the actual ending of the previous generation. Upload the clip or its final frame, or describe exactly what is visible at the end. I should not invent the continuation state."
+If the source is unavailable, say: "I have the story plan, but I do not have the actual ending of the previous generation. Upload the clip or its final frame - `python scripts/extract_last_frame.py <take>` pulls the final frame locally - or describe exactly what is visible at the end. I should not invent the continuation state."
+
+Once a frame or clip is attached, run the Observation Fast Path from `[ref:continuation-handoff]`: the agent fills the observation record from what is visible and asks only about what the attachment cannot show (for a still: open motion, camera movement phase, audio phase). Never hand the sensing work back to the user when the pixels are already in hand.
 
 Do not hide this uncertainty by writing a speculative prompt.
 

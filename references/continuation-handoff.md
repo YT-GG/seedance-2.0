@@ -20,6 +20,18 @@ Do not write a continuation prompt until these are known:
 
 If the source is missing, ask for the clip, final frame, or an exact visible-end description. Do not invent it.
 
+## Observation Fast Path
+
+The user should never be the state sensor. The moment a final frame or the accepted clip is attached, the AGENT fills the observation record from what is visible and asks only about what the attachment cannot show:
+
+- **Final frame attached:** the agent reads pose, screen position, wardrobe and props, environment, lighting phase, and framing directly off the still, then asks at most three targeted questions - open motion at the cut, camera movement phase, and audio phase - because a still can never show them.
+- **Full clip attached:** the agent reads everything including motion, camera phase, and (when audible) audio phase; usually nothing is left to ask.
+- **Nothing attached:** only then fall back to asking the user to describe the visible end - and offer the extraction tool first.
+
+For users working with this repository locally, `python scripts/extract_last_frame.py <take>` extracts the final frame of an accepted take (`--first-frame` for the opening; `--emit-record` prints this observation skeleton with the frame-readable and frame-blind categories marked). The extracted frame doubles as the continuation image reference, so one attachment pays for both the observation record and the next generation's anchor.
+
+Do not interrogate the user across all record categories when an attachment is present: fill what is visible, state `observation_confidence`, and confirm rather than ask.
+
 ## Handoff Record
 
 Record:

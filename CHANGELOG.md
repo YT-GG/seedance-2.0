@@ -2,11 +2,25 @@
 
 All notable changes to this project are documented here.
 
-Current active release: **6.5.0**. Older entries below are preserved as release history, not active version guidance.
+Current active release: **6.6.0**. Older entries below are preserved as release history, not active version guidance.
 
 ## Unreleased
 
 _No unreleased changes._
+
+## [6.6.0] — 2026-07-04
+
+### Added
+
+- Added `scripts/extract_last_frame.py`: ffmpeg-based last/first-frame extraction from an accepted take, with `--emit-record` printing the observation skeleton (frame-readable vs frame-blind categories, aligned with the take-review schema) and a pure-Python `--self-test` wired into CI. The extracted frame doubles as the continuation image reference.
+- Added the **Observation Fast Path** to `continuation-handoff` and `seedance-continuation`: when a final frame or clip is attached, the AGENT fills the observation record from the pixels and asks at most three targeted questions about what a still cannot show (open motion, camera movement phase, audio phase) - the user stops being the state sensor.
+- Added a **State Lifecycle** to `sequence-project-state`: file conventions for persistent-workspace agents (`project-state.json` as machine truth, capsule regenerated from it, take log archived separately), compaction rules (completed scenes compress to one line, full detail only for the current scene plus previous accepted clip, superseded takes archive on scene close, capsule under ~40 lines), and `state_revision` bump rules.
+- Added `references/sequence-worked-trace.md`: the prose end-to-end trace around the existing machine fixtures - plan with scenes and felt intents, compile, a real accepted deviation (two steps short), reconciliation, the unexpected-completed-beat case, the chain cap and scheduled re-anchor at the scene boundary, and session break/resume via capsule. Registered as a required reference with Load Map routes from the root skill and `seedance-sequence`.
+- Added evals `observed_state_from_attached_frame` and `capsule_compaction_long_project` (126 total).
+
+### Changed
+
+- Bumped active metadata, README badges (59 references, 126 eval cases), eval/validator expectations, manifest, readiness, examples, and translated entries to v6.6.0.
 
 ## [6.5.0] — 2026-07-04
 

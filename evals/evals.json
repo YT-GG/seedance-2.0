@@ -1,5 +1,5 @@
 {
-  "version": "6.5.0",
+  "version": "6.6.0",
   "updated": "2026-07-04",
   "cases": [
     {
@@ -2761,6 +2761,37 @@
       "skills_expected_to_activate": [
         "seedance-continuation",
         "seedance-prompt"
+      ]
+    },
+    {
+      "id": "observed_state_from_attached_frame",
+      "prompt": "Here's the final frame of my accepted Clip 04 [Image2] - she's at the doorway, hand on the frame, kitchen behind her, warm lamp on. Write the next clip.",
+      "expected_output": "The agent fills the observation record from the attached frame itself and asks at most a few targeted questions about what a still cannot show (open motion, camera movement phase, audio phase) instead of interrogating the user across every category.",
+      "assertions": [
+        "reads pose, position, wardrobe/props, environment, lighting, and framing from the attached frame rather than asking the user to describe them",
+        "asks only about what the still cannot show: open motion at the cut, camera movement phase, and audio phase",
+        "states observation confidence and confirms the filled record rather than interrogating category by category",
+        "uses the attached frame as the continuation image reference"
+      ],
+      "failure_mode": "handing the sensing work back to the user with a long observation questionnaire while the frame is already attached",
+      "skills_expected_to_activate": [
+        "seedance-continuation"
+      ]
+    },
+    {
+      "id": "capsule_compaction_long_project",
+      "prompt": "Resuming my 26-clip series - here's my project state, it's gotten huge, hundreds of lines, with every old take still in it. Clip 27 continues scene 9. Help me continue without pasting this monster every session.",
+      "expected_output": "Applies the state lifecycle: completed scenes compress to one line each, superseded takes archive to a separate take log, full detail is kept only for the current scene plus the previous accepted clip, and a regenerated capsule under roughly 40 lines carries the resume.",
+      "assertions": [
+        "compresses completed scenes to one line each (scene id, outcome, final accepted frame) in the capsule",
+        "archives superseded takes to a separate take log instead of keeping them in the working state",
+        "keeps full detail only for the current scene and the immediately previous accepted clip",
+        "regenerates a compact capsule (about 40 lines) with a bumped state_revision as the cross-session handoff"
+      ],
+      "failure_mode": "re-pasting the entire append-only state every session because no compaction rule exists",
+      "skills_expected_to_activate": [
+        "seedance-sequence",
+        "seedance-continuation"
       ]
     }
   ]
