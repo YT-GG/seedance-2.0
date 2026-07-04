@@ -35,4 +35,5 @@ Before a successor prompt ships, verify:
 - completed beats excluded;
 - future beats excluded;
 - exact tags preserved;
+- successor `felt_intent` present and still served by the compiled prompt's visible choices - continuity-correct but affect-flat fails this check;
 - current prompt covers only current clip.

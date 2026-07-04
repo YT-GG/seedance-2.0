@@ -38,7 +38,7 @@ Scene fields: `scene_id`, `scene_index`, `narrative_function`, `arc_position`, `
 
 Beat fields: `beat_id`, `description`, `narrative_function`, `status`, `assigned_clip_id`, and `dependencies`.
 
-Clip lineage fields: `clip_id`, `parent_clip_id`, `scene_id`, `sequence_index`, `prompt_version`, `generation_mode`, `source_clip_tag`, `status`, `narrative_job`, `already_happened`, `this_clip_only`, `reserved_for_later`, `planned_start_state`, `planned_end_state`, `observed_start_state`, `observed_end_state`, `continuity_locks`, `allowed_changes`, `continuity_breaks`, `accepted_deviations`, `transition_in`, `transition_out`, `open_motion_vectors`, `handoff_requirements`, and `extension_depth`.
+Clip lineage fields: `clip_id`, `parent_clip_id`, `scene_id`, `sequence_index`, `prompt_version`, `generation_mode`, `source_clip_tag`, `status`, `narrative_job`, `felt_intent`, `already_happened`, `this_clip_only`, `reserved_for_later`, `planned_start_state`, `planned_end_state`, `observed_start_state`, `observed_end_state`, `continuity_locks`, `allowed_changes`, `continuity_breaks`, `accepted_deviations`, `transition_in`, `transition_out`, `open_motion_vectors`, `handoff_requirements`, and `extension_depth`.
 
 ## Visual State
 
@@ -92,6 +92,7 @@ CURRENT ACTUAL STATE:
 OPEN MOTION:
 COMPLETED BEATS:
 NEXT CLIP JOB:
+NEXT CLIP INTENT:
 CONTINUITY LOCKS:
 ALLOWED CHANGES:
 RESERVED FUTURE BEATS:

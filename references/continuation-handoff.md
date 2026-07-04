@@ -11,6 +11,7 @@ Do not write a continuation prompt until these are known:
 - `scene_id`, and whether this continuation stays inside the scene or crosses a scene boundary;
 - accepted source clip or accepted final frame;
 - observed end state;
+- next clip's `felt_intent` - what the viewer should feel or notice;
 - completed beats;
 - reserved future beats;
 - continuity locks;

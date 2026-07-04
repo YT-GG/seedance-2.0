@@ -28,14 +28,14 @@ REQUIRED_BEAT_FIELDS = {
 }
 REQUIRED_CLIP_FIELDS = {
     "clip_id", "parent_clip_id", "scene_id", "sequence_index", "prompt_version", "generation_mode",
-    "status", "narrative_job", "already_happened", "this_clip_only", "reserved_for_later",
+    "status", "narrative_job", "felt_intent", "already_happened", "this_clip_only", "reserved_for_later",
     "planned_start_state", "planned_end_state", "observed_start_state", "observed_end_state",
     "continuity_locks", "allowed_changes", "continuity_breaks", "accepted_deviations",
     "transition_in", "transition_out", "open_motion_vectors", "handoff_requirements",
     "extension_depth",
 }
 REQUIRED_CLIP_CONTRACT_FIELDS = {
-    "project_id", "clip_id", "parent_clip_id", "scene_id", "sequence_index", "narrative_job",
+    "project_id", "clip_id", "parent_clip_id", "scene_id", "sequence_index", "narrative_job", "felt_intent",
     "target_duration_sec", "generation_mode", "shot_structure", "already_happened",
     "this_clip_only", "reserved_for_later", "planned_start_state", "planned_end_state",
     "continuity_locks", "allowed_changes", "status",
@@ -142,6 +142,9 @@ def validate_project(path: Path, root: Path) -> list[str]:
         if not isinstance(depth, int) or isinstance(depth, bool) or depth < 0:
             errors.append(f"{rel}: clip {cid} extension_depth must be a non-negative integer")
             depth = None
+        felt = clip.get("felt_intent")
+        if "felt_intent" in clip and (not isinstance(felt, str) or not felt.strip()):
+            errors.append(f"{rel}: clip {cid} felt_intent must be a non-empty one-line string")
         if sid not in scene_ids:
             errors.append(f"{rel}: clip {cid} scene {sid} is missing")
         elif sid in scene_depth_caps and depth is not None and depth > scene_depth_caps[sid]:
@@ -230,6 +233,9 @@ def main() -> int:
             continue
         if "contract" in path.name:
             check_required(obj, REQUIRED_CLIP_CONTRACT_FIELDS, rel, errors)
+            felt = obj.get("felt_intent")
+            if "felt_intent" in obj and (not isinstance(felt, str) or not felt.strip()):
+                errors.append(f"{rel}: felt_intent must be a non-empty one-line string")
             if set(obj.get("this_clip_only", [])) & set(obj.get("reserved_for_later", [])):
                 errors.append(f"{rel}: current and reserved beats overlap")
         if "take-review" in path.name or path.name == "take-review.json":

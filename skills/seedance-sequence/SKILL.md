@@ -9,7 +9,7 @@ tags:
   - prompt-compiler
   - seedance-20
 metadata:
-  version: "6.4.0"
+  version: "6.5.0"
   updated: "2026-07-04"
   parent: "seedance-20"
   author: "Iamemily2050 (@iamemily2050)"
@@ -60,7 +60,7 @@ Plan scenes before clips. A scene is the re-anchor unit: one location and time e
 3. Extract ordered beats and assign each beat a status: planned, current, completed, omitted, or replaced.
 4. Group beats into scenes: assign each scene one location and time envelope, one `arc_position`, canonical `anchor_source` references, `max_chain_depth` (default 2), and an audio plan.
 5. Divide each scene into generation-sized clips using the active surface budget or conservative assumption; chain clips from accepted footage only inside a scene, and open every scene from canonical references.
-6. Give every clip one narrative job and one completed endpoint.
+6. Give every clip one narrative job, one `felt_intent` - a single line naming what the viewer should feel or notice, the directing engine's intention made persistent in state - and one completed endpoint.
 7. Define planned opening state, planned ending state, continuity locks, allowed changes, and extension-friendly handoff requirements.
 8. Store later clips as provisional intent cards, not final prompts.
 9. Compile only the first unresolved clip prompt from the current clip contract.
@@ -70,7 +70,7 @@ Use beginner-friendly language. It is valid to say: "This idea needs three conne
 
 ## Sequence Map Fields
 
-Each clip card must include `clip_id`, `scene_id`, `sequence_index`, `parent_clip_id`, `narrative_job`, `target_duration_sec`, `generation_mode`, `shot_structure`, `already_happened`, `this_clip_only`, `reserved_for_later`, `planned_start_state`, `planned_end_state`, `transition_in`, `transition_out`, `continuity_locks`, `allowed_changes`, `arc_position`, and `status`. The `arc_position` (open, rising, turn, climax, or release) is inherited from the clip's scene and records where it sits on the directorial spine so its scale, movement, light, and sound trends inherit the project voice.
+Each clip card must include `clip_id`, `scene_id`, `sequence_index`, `parent_clip_id`, `narrative_job`, `felt_intent`, `target_duration_sec`, `generation_mode`, `shot_structure`, `already_happened`, `this_clip_only`, `reserved_for_later`, `planned_start_state`, `planned_end_state`, `transition_in`, `transition_out`, `continuity_locks`, `allowed_changes`, `arc_position`, and `status`. The `arc_position` (open, rising, turn, climax, or release) is inherited from the clip's scene and records where it sits on the directorial spine so its scale, movement, light, and sound trends inherit the project voice.
 
 Each scene card must include `scene_id`, `scene_index`, `narrative_function`, `arc_position`, `location`, `time_of_day`, `anchor_source`, `max_chain_depth`, `audio_plan`, `assigned_clip_ids`, `transition_out`, and `status`.
 
@@ -86,9 +86,10 @@ For a new sequence, return:
 4. World and continuity bible, including the chosen directorial voice and the long-form look spine (how scale, movement, light, and sound progress, and which clip breaks the pattern).
 5. Scene map and sequence map.
 6. Clip 01 contract.
-7. Clip 01 final Seedance prompt in natural language.
-8. Provisional intent cards for future clips.
-9. Instruction to return the generated clip or final frame before Clip 02 is finalized.
-10. Project State Capsule.
+7. Intent echo: one line - "this clip exists so the viewer feels X" - confirmed before generation spends money.
+8. Clip 01 final Seedance prompt in natural language.
+9. Provisional intent cards for future clips.
+10. Instruction to return the generated clip or final frame before Clip 02 is finalized.
+11. Project State Capsule.
 
 Do not output internal JSON unless the user asks for it. The readable capsule is the cross-session handoff.

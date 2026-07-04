@@ -2,10 +2,10 @@
 
 ## Current Patch
 
-- Active package version: `6.4.0`.
-- Patch scope: directing engine (motivated scene direction, one directorial voice, long-form look spine) wired across interview, prompt, camera, lighting, motion, characters, sequence, and continuation; carried-forward provider/router, Seedance 2.0 Mini naming, and Runway-source maintenance.
+- Active package version: `6.5.0`.
+- Patch scope: felt intent - a per-clip `felt_intent` field (the directing engine's intention made persistent in state) threaded through the clip contract, compiler compile order and compression priority, continuity QC boundary check, continuation gates, capsule, schemas, and validators, with a pre-generation intent echo.
 - Current expected active sub-skills: 28.
-- Current expected eval cases: 123.
+- Current expected eval cases: 124.
 
 ## Baseline
 
@@ -116,11 +116,11 @@ git diff --check
 
 ## Release Acceptance Results
 
-Final full-suite run on 2026-07-04 (v6.4.0 scene-layer release):
+Final full-suite run on 2026-07-04 (v6.5.0 felt-intent release):
 
-- `python scripts/validate_skills.py --strict`: pass; root plus 28 sub-skills and required v6.4.0 files.
+- `python scripts/validate_skills.py --strict`: pass; root plus 28 sub-skills and required v6.5.0 files.
 - `python scripts/content_audit.py --strict`: pass; active content clean, migrated archived warnings remain warning-only.
-- `python scripts/eval_schema_check.py --strict`: pass; 123 eval cases.
+- `python scripts/eval_schema_check.py --strict`: pass; 124 eval cases.
 - `python scripts/design_audit.py --strict`: pass.
 - `python scripts/source_registry_check.py --strict`: pass.
 - `python scripts/vocab_schema_check.py --strict`: pass.

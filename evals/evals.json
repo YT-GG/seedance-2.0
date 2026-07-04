@@ -1,5 +1,5 @@
 {
-  "version": "6.4.0",
+  "version": "6.5.0",
   "updated": "2026-07-04",
   "cases": [
     {
@@ -2745,6 +2745,22 @@
       "skills_expected_to_activate": [
         "seedance-sequence",
         "seedance-continuation"
+      ]
+    },
+    {
+      "id": "felt_intent_survives_compression",
+      "prompt": "Compile Clip 03 of my sequence on a tight budget - about 60 words. The clip's job: she reads the verdict letter at the kitchen table. The intent: the viewer feels her world tilt. Attached: [Video1] is the accepted Clip 02, [Image1] locks her identity.",
+      "expected_output": "A compact prompt that keeps the felt-intent carriers - the specific light, performance, and sound choices that make the world-tilt land - while cutting prose that repeats the attached source, with a one-line intent echo before the final prompt and no abstract emotion words shipped to Seedance.",
+      "assertions": [
+        "keeps the felt-intent carriers under compression: the light, performance, and sound clauses that make the viewer feel the intended shift",
+        "does not ship abstract emotion words to Seedance; the intent compiles as visible choices",
+        "echoes the clip's felt intent in one line before the final prompt",
+        "cuts opening-state prose that repeats what the attached [Video1] source already shows rather than cutting intent carriers"
+      ],
+      "failure_mode": "compressing to a continuity-correct but affect-flat prompt because emotional intention has no protected place in the budget",
+      "skills_expected_to_activate": [
+        "seedance-continuation",
+        "seedance-prompt"
       ]
     }
   ]

@@ -2,11 +2,24 @@
 
 All notable changes to this project are documented here.
 
-Current active release: **6.4.0**. Older entries below are preserved as release history, not active version guidance.
+Current active release: **6.5.0**. Older entries below are preserved as release history, not active version guidance.
 
 ## Unreleased
 
 _No unreleased changes._
+
+## [6.5.0] — 2026-07-04
+
+### Added
+
+- Added **`felt_intent`** to the clip contract - one line naming what the viewer should feel or notice, the directing engine's intention made persistent in sequence state. This closes the "continuity-correct but affect-flat" failure: the compiler's compression priority previously protected tags, state, action, locks, and exclusions, so under a tight prompt budget the emotional intention was the first thing silently deleted.
+- Compiler integration (`prompt-compiler.md`): felt intent has its own compile-order step and sits in compression priority directly after action/endpoint - above continuity locks - as **felt-intent carriers**: the specific light, performance, and sound clauses that make the viewer feel what the clip exists to make them feel. The intent itself never ships to Seedance as an abstract emotion word (anti-slop holds); its carriers ship as concrete visible choices.
+- Added a **pre-generation intent echo** to `seedance-sequence` and `seedance-continuation` output contracts: one line - "this clip exists so the viewer feels X" - confirmed before generation spends money. `continuity-qc`'s boundary check now fails a successor prompt whose visible choices no longer serve its felt intent.
+- Threaded `felt_intent` through the root Sequence Gate, `continuation-handoff` source gate, the continuation Required Input Gate, clip lineage fields, the Project State Capsule (NEXT CLIP INTENT), both JSON schemas (required, non-empty), `project_state_check.py` (presence plus non-empty-string validation for states and contracts, five negative-tested gates), and all example fixtures with clip-specific intent lines. Added eval `felt_intent_survives_compression`.
+
+### Changed
+
+- Bumped active metadata, README badges (124 eval cases), eval/validator expectations, manifest (patch scope refreshed - it still described v6.1.0), readiness, examples, and translated entries to v6.5.0.
 
 ## [6.4.0] — 2026-07-04
 

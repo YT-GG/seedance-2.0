@@ -1,5 +1,5 @@
 {
-  "schema_version": "6.4.0",
+  "schema_version": "6.5.0",
   "state_revision": 1,
   "project_id": "seq_observed_deviation",
   "project_mode": "sequence_project",
@@ -38,10 +38,16 @@
       "arc_position": "climax",
       "location": "wet rooftop service area",
       "time_of_day": "night",
-      "anchor_source": ["[Image1]"],
+      "anchor_source": [
+        "[Image1]"
+      ],
       "max_chain_depth": 2,
       "audio_plan": "Clips carry rain ambience and footstep SFX; score is unified in post.",
-      "assigned_clip_ids": ["clip_01", "clip_02", "clip_03"],
+      "assigned_clip_ids": [
+        "clip_01",
+        "clip_02",
+        "clip_03"
+      ],
       "transition_out": "cut",
       "status": "current"
     }
@@ -82,11 +88,12 @@
       "parent_clip_id": null,
       "scene_id": "scene_01",
       "sequence_index": 1,
-      "prompt_version": "6.4.0",
+      "prompt_version": "6.5.0",
       "generation_mode": "I2V",
       "source_clip_tag": null,
       "status": "ready",
       "narrative_job": "Unlock the rooftop case.",
+      "felt_intent": "The viewer feels focused urgency - practiced hands working against the rain.",
       "already_happened": [],
       "this_clip_only": [
         "beat_unlock_case"
@@ -132,11 +139,12 @@
       "parent_clip_id": "clip_01",
       "scene_id": "scene_01",
       "sequence_index": 2,
-      "prompt_version": "6.4.0",
+      "prompt_version": "6.5.0",
       "generation_mode": "V2V",
       "source_clip_tag": "[Video1]",
       "status": "planned",
       "narrative_job": "Open the unlocked case.",
+      "felt_intent": "The viewer feels anticipation sharpen as the case yields.",
       "already_happened": [
         "beat_unlock_case"
       ],
@@ -188,11 +196,12 @@
       "parent_clip_id": "clip_02",
       "scene_id": "scene_01",
       "sequence_index": 3,
-      "prompt_version": "6.4.0",
+      "prompt_version": "6.5.0",
       "generation_mode": "V2V",
       "source_clip_tag": "[Video2]",
       "status": "planned",
       "narrative_job": "Light the signal device inside the open case.",
+      "felt_intent": "The viewer feels the payoff spark - the signal finally alive against the night.",
       "already_happened": [
         "beat_unlock_case",
         "beat_open_case"

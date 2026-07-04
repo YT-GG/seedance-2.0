@@ -9,7 +9,7 @@ tags:
   - continuity
   - seedance-20
 metadata:
-  version: "6.4.0"
+  version: "6.5.0"
   updated: "2026-07-04"
   parent: "seedance-20"
   author: "Iamemily2050 (@iamemily2050)"
@@ -40,6 +40,7 @@ Before writing any continuation prompt, require:
 - full-story objective;
 - final story outcome;
 - next planned narrative job;
+- next clip `felt_intent` - what the viewer should feel or notice;
 - accepted previous clip or accepted final frame;
 - `observed_end_state`;
 - continuity locks;
@@ -83,8 +84,9 @@ Return:
 2. Source evidence used.
 3. Observed end state.
 4. Next clip contract.
-5. Continuity locks and allowed changes.
-6. Completed beats to exclude.
-7. Reserved future beats to exclude.
-8. Final natural-language Seedance prompt for the current clip only.
-9. Updated Project State Capsule or a request for missing source evidence.
+5. Intent echo: one line - "this clip exists so the viewer feels X" - confirmed before generation spends money.
+6. Continuity locks and allowed changes.
+7. Completed beats to exclude.
+8. Reserved future beats to exclude.
+9. Final natural-language Seedance prompt for the current clip only.
+10. Updated Project State Capsule or a request for missing source evidence.

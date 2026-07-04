@@ -5,7 +5,7 @@ license: MIT
 user-invocable: true
 tags: [seedance]
 metadata:
-  version: "6.4.0"
+  version: "6.5.0"
 ---
 
 # seedance-20
@@ -52,7 +52,7 @@ Leave the fast lane the instant the request earns a gate: IP/likeness/brand/safe
 
 ## Sequence Gate
 
-For a sequence project, do not write Clip 01 until these are known: story objective, final story outcome, ordered major beats grouped into scenes, active surface or conservative surface assumption, clip budget, current clip narrative job, and current clip completed endpoint.
+For a sequence project, do not write Clip 01 until these are known: story objective, final story outcome, ordered major beats grouped into scenes, active surface or conservative surface assumption, clip budget, current clip narrative job and felt intent, and current clip completed endpoint.
 
 Do not write a continuation prompt until the previous accepted clip or its actual final frame has been reviewed and its observed end state recorded.
 

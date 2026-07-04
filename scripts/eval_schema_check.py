@@ -130,6 +130,7 @@ REQUIRED_IDS = {
     "directing_refuses_unmotivated_technique",
     "audio_reference_lipsync_non_english",
     "scene_layer_caps_extension_chain",
+    "felt_intent_survives_compression",
 }
 
 
