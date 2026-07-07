@@ -57,7 +57,7 @@ First, underline all superlatives and vague style labels and classify each by sl
 
 Do not remove useful genre language when it is paired with concrete direction. `Noir hallway with hard venetian-blind shadows` is useful; `dramatic cinematic noir vibes` is not. Keep terms that communicate medium, era, palette, or lens behavior.
 
-Load `[ref:anti-slop-lexicon]` for the slop-class taxonomy and extended replacement table, and `[skill:seedance-vocab-en]` with `references/vocab/en.md` for the full function-organized English precision vocabulary. For non-English prompts, load the matching vocab file's Slop Traps table (`references/vocab/zh.md`, `ja.md`, `ko.md`, `es.md`, `ru.md`) - each language community has its own empty-quality words and decompositions.
+Load `[ref:anti-slop-lexicon]` for the slop-class taxonomy and extended replacement table. For Chinese prompts, load `[skill:seedance-vocab-zh]` and the Slop Traps table in `references/vocab/zh.md` so empty quality words become physical choices such as shot size, camera path, light source, material, color, air, action, and endpoint.
 
 ## Output Contract
 

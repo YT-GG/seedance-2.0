@@ -116,44 +116,32 @@ Use these examples as patterns, not fixed scripts. Preserve reference tags exact
 
 `@图1为首帧，@图2为尾帧。保持同一原创角色、服装和房间布局，角色从椅子上缓慢站起，走到窗边并停在尾帧姿势。动作连续自然，不跳切，不改变脸部、衣服或房间结构。镜头固定中景，仅轻微推镜。声音：安静室内环境声。`
 
-## Russian I2V Product Preservation
+## Chinese Reference Role Map
 
-**Mode:** I2V. **Why it works:** Russian wording keeps the product lock and only changes light and environment motion.
+**Mode:** R2V. **Why it works:** each image, video, and audio reference is separated into one safe role.
 
-`[Image1] как первый кадр и референс продукта; сохранить логотип, этикетку, форму, цвет и крышку без изменений. Меняются только свет и небольшое движение среды: теплый источник слева медленно проходит по стеклу, капли соединяются и стекают вниз. Камера: фиксированный средний план с очень медленным наездом на этикетку. Звук: тихий фон, легкий стеклянный щелчок в конце.`
+`@图1锁定原创角色身份与服装；@图2仅参考雨夜街道氛围；@视频1仅参考缓慢侧向跟拍，不复制人物、地点或品牌。原创角色穿过湿润站台，停在一盏闪烁灯下。镜头：固定中远景，35mm视角，一次缓慢侧移。声音：雨声、脚步声，无音乐。`
 
-## Russian Reference Role Map
+## Chinese Portrait Control
 
-**Mode:** R2V. **Why it works:** image, video, and audio references are separated into safe roles.
+**Mode:** I2V. **Why it works:** compact Chinese preserves identity while limiting motion.
 
-`[Image1] задает оригинального персонажа и костюм. [Video1] задает только ритм бокового сопровождения камеры; не копировать людей, место, бренды или узнаваемую сцену. [Audio1] задает только темп и настроение. Персонаж идет по мокрой вечерней улице, останавливается под фонарем и оборачивается. Камера: плавное боковое сопровождение, затем фиксированный средний план. Звук: дождь, шаги, без музыки.`
+`[Image1]为人物参考，保持脸型、发型、服装和背景构图。动作很小：眨眼一次，视线略微下垂，最后克制地微笑。镜头固定中近景，不重新构图。光线：画面右侧柔和窗光。声音：安静室内环境声。`
 
-## Chinese-English Mixed Role Map
-
-**Mode:** R2V. **Why it works:** Chinese binds references compactly while English keeps shared camera terms precise.
-
-`@图1锁定原创角色身份与服装；@图2仅参考雨夜街道氛围；@视频1仅参考 slow lateral tracking，不复制人物、地点或品牌。原创角色穿过湿润站台，停在一盏闪烁灯下。Camera: locked medium-wide, 35mm lens, one slow side track. Sound: rain, footsteps, no music.`
-
-## Japanese-English Portrait Control
-
-**Mode:** I2V. **Why it works:** Japanese gives natural performance language while English locks camera behavior.
-
-`[Image1]の人物の顔、髪型、衣装、背景構図を保持。動きは小さく：一度まばたきし、視線を少し下げ、最後に控えめに微笑む。Camera: locked medium close-up, no reframing. Lighting: soft window light from frame right. Sound: quiet room tone.`
-
-## Korean-English Melodrama Blocking
+## Chinese Melodrama Blocking
 
 **Mode:** T2V. **Why it works:** character spacing, emotional micro-action, and sound are separated.
 
-`현대 아파트 주방, two original adult characters only. Character A lowers a ceramic mug and looks away; Character B stays near the window, no approach. Camera: locked medium-wide, subtle handheld breathing sway. Lighting: warm tungsten practical, faint blue city spill. Sound: refrigerator hum, fabric movement, no music.`
+`现代公寓厨房，只有两个原创成年角色。Character A 放下陶瓷杯并移开视线；Character B 停在窗边，不靠近。镜头：固定中远景，轻微手持呼吸感。灯光：暖色钨丝实景灯，窗外淡蓝城市反光。声音：冰箱低鸣、布料摩擦声，无音乐。`
 
-## Spanish-English Product Preservation
+## Chinese Product Preservation
 
-**Mode:** I2V. **Why it works:** Spanish preservation wording is paired with a simple English camera command.
+**Mode:** I2V. **Why it works:** product preservation wording is paired with a single camera command.
 
-`[Image1] es la referencia del producto; conservar forma, etiqueta, logo y color sin cambios. Solo cambia el ambiente: una luz cálida cruza el vidrio y aparecen gotas pequeñas. Camera: slow slider from left to right, locked product scale. Sound: room tone, soft glass tap at the end.`
+`[Image1]为产品参考，保持形状、标签、logo和颜色不变。只改变环境：一条暖色光带扫过玻璃，出现少量水珠。镜头：从左到右缓慢滑移，产品比例保持不变。声音：室内环境声，结尾轻微玻璃声。`
 
-## Multilingual False-Positive Repair
+## Chinese False-Positive Repair
 
 **Mode:** T2V repair. **Why it works:** it clarifies a safe staged scene instead of hiding risky intent.
 
-`原创成年角色进行 staged confrontation，非写实伤害、无血腥、无真实武器。Action: one choreographed step backward, a table prop slides, the character freezes at the doorway. Camera: locked medium shot. Lighting: low warm practical, blue window rim. Sound: chair scrape, breath, silence after.`
+`原创成年角色进行舞台化紧张对峙，非写实伤害、无血腥、无真实武器。动作：角色按排练好的节奏后退一步，桌面道具滑动，最后停在门口。镜头：固定中景。灯光：低亮度暖色实景灯，蓝色窗边轮廓光。声音：椅子摩擦声、呼吸声，随后安静。`

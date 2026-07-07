@@ -22,7 +22,7 @@ jobs:
         run: python scripts/design_audit.py --strict
       - name: Validate source freshness and claim labels
         run: python scripts/source_registry_check.py --strict
-      - name: Validate multilingual vocabulary schema
+      - name: Validate Chinese vocabulary schema
         run: python scripts/vocab_schema_check.py --strict
       - name: Validate sequence project state
         run: python scripts/project_state_check.py --strict

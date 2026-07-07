@@ -9,11 +9,10 @@ from pathlib import Path
 
 EXPECTED_SKILLS = [
     "seedance-antislop", "seedance-audio", "seedance-camera", "seedance-characters", "seedance-continuation",
-    "seedance-copyright", "seedance-examples-ja", "seedance-examples-ko", "seedance-examples-zh", "seedance-filter", "seedance-interview",
+    "seedance-copyright", "seedance-examples-zh", "seedance-filter", "seedance-interview",
     "seedance-interview-short", "seedance-lighting", "seedance-motion", "seedance-pipeline",
     "seedance-prompt", "seedance-prompt-short", "seedance-recipes", "seedance-style",
-    "seedance-sequence", "seedance-troubleshoot", "seedance-vfx", "seedance-vocab-en", "seedance-vocab-es", "seedance-vocab-ja",
-    "seedance-vocab-ko", "seedance-vocab-ru", "seedance-vocab-zh",
+    "seedance-sequence", "seedance-troubleshoot", "seedance-vfx", "seedance-vocab-zh",
 ]
 
 EXPECTED_VERSION = "6.6.0"
@@ -41,7 +40,6 @@ REQUIRED_REFERENCES = [
     "references/audio-post-delivery.md",
     "references/delivery-qc.md",
     "references/examples-by-mode.md",
-    "references/multilingual-community-examples.md",
     "references/platform-surface-matrix.md",
     "references/model-name-map.md",
     "references/first-last-frame-guide.md",
@@ -72,12 +70,7 @@ REQUIRED_REFERENCES = [
     "references/continuity-qc.md",
     "references/failure-atlas.md",
     "references/sequence-worked-trace.md",
-    "references/vocab/en.md",
     "references/vocab/zh.md",
-    "references/vocab/ja.md",
-    "references/vocab/ko.md",
-    "references/vocab/es.md",
-    "references/vocab/ru.md",
 ]
 
 REQUIRED_FILES = [
@@ -148,8 +141,8 @@ REQUIRED_FILES = [
     "docs/frontend-redesign.md",
     "docs/v6-release-readiness.md",
     "docs/README.zh.md",
-    "docs/README.ja.md",
-    "docs/README.ko.md",
+    "zh-QUICKSTART.md",
+    "zh-USAGE.md",
 ]
 
 REQUIRED_FIELDS = ["name", "description", "license", "user-invocable", "tags", "metadata"]
@@ -318,7 +311,7 @@ def main() -> int:
     if installer.exists():
         installer_text = installer.read_text(encoding="utf-8")
         if re.search(r"IGNORE_NAMES\s*=\s*{[^}]*[\"']docs[\"']", installer_text, re.S):
-            errors.append("scripts/install_codex_skill.py must include docs/ because README links native zh/ja/ko guides")
+            errors.append("scripts/install_codex_skill.py must include docs/ because README links the Chinese guide")
 
     openai_yaml = root / "agents" / "openai.yaml"
     if openai_yaml.exists():

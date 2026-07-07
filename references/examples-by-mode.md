@@ -46,37 +46,37 @@ Use these as safe structures, not fixed scripts. They are original examples and 
 
 Continuity anchors: same bottle orientation, label color, dawn palette, clean counter surface, no burned-in text. Delivery notes: make textless 16:9 and 9:16 versions; add claims/captions in post.
 
-## Localization Handoff Example
+## Chinese Caption Handoff Example
 
-`Character A stands still in a locked medium close-up and says "We start now." Spoken language: English. Post: create subtitles in Spanish, Japanese, Korean, Russian, and Chinese; keep lower third clear; no burned-in captions; preserve textless plate and room tone for dubbing/M&E.`
+`Character A stands still in a locked medium close-up and says one short Mandarin line: "我们现在开始。" Post: Chinese subtitles, SDH captions, and legal text are added in edit; keep lower third clear; no burned-in captions; preserve textless plate and room tone for dubbing/M&E.`
 
 ## Delivery QC Example
 
 `Before delivery: verify frame rate, aspect ratio, crop-safe product placement, product color, no logo drift, dialogue sync, loudness target per buyer spec, subtitle placement, textless export, rights notes for Image1/Audio1, and human watch-through at normal speed.`
 
-## Multilingual Community-Informed Examples
+## Chinese Prompt Examples
 
-These examples are original structures distilled from public multilingual practice. They do not copy community prompt text.
+These examples are original Chinese structures. They preserve reference tags and avoid copied community prompt text.
 
-### Chinese-English R2V
+### Chinese R2V
 
-`@图1锁定原创角色身份与服装；@视频1仅参考 camera rhythm，不复制人物、地点或品牌；@音频1仅参考节奏。Original courier walks across a wet train platform, stops under one flickering sign, and turns left on the final beat. Camera: 35mm locked medium-wide, one slow side track. Sound: rain, footsteps, no music.`
+`@图1锁定原创角色身份与服装；@视频1仅参考侧向跟拍节奏，不复制人物、地点或品牌；@音频1仅参考节奏。原创快递员穿过潮湿站台，停在一盏闪烁灯下，最后一拍向左转头。镜头：35mm固定中远景，一次缓慢侧移。声音：雨声、脚步声，无音乐。`
 
-### Japanese I2V
+### Chinese I2V Portrait
 
-`[Image1]の人物の顔、髪型、衣装、背景構図を保持。動きは小さく、まばたき一回、視線を少し下げるだけ。Camera: locked medium close-up, no reframing. Lighting: soft window light. Sound: quiet room tone.`
+`[Image1]为人物参考，保持脸型、发型、服装和背景构图。动作很小：眨眼一次，视线略微下垂，最后给出克制微笑。镜头固定中近景，不重新构图。光线保持柔和窗光。声音：安静室内环境声。`
 
-### Korean Dialogue
+### Chinese Dialogue
 
-`현대 카페, Character A sits still in a locked medium close-up and says, "괜찮아, 천천히 말해." Keep mouth movement small, no head turn during dialogue, no music under the line. Sound: cafe room tone and a soft cup tap at the end.`
+`现代咖啡馆，Character A 坐在固定中近景里，肩膀不动，只说一句："没关系，慢慢说。"说话时嘴部动作小，不转头，台词下方无音乐。声音：咖啡馆环境声，结尾一声轻微杯碟声。`
 
-### Spanish Product
+### Chinese Product
 
-`[Image1] es la referencia del producto; conservar forma, etiqueta, logo y color sin cambios. Solo cambia la luz: una franja cálida cruza el vidrio y las gotas bajan lentamente. Camera: locked product shot with slow push-in.`
+`[Image1]为产品参考，保持形状、标签、logo和颜色不变。只改变光线：一条暖色光带扫过玻璃，水珠缓慢下滑。镜头：固定产品近景，轻微推近。`
 
-### Russian Safe Suspense
+### Chinese Safe Suspense
 
-`Постановочная сцена напряжения без натуралистичных деталей: взрослый оригинальный персонаж отступает от закрытой двери, роняет ключи и замирает. Camera: locked medium shot. Lighting: warm practical plus blue window rim. Sound: key drop, breath, no music.`
+`安全的舞台化紧张场面，无写实伤害、无血腥、无真实武器：原创成年角色从关闭的门前后退一步，钥匙掉落并停住。镜头：固定中景。灯光：暖色实景灯加蓝色窗边轮廓光。声音：钥匙落地、呼吸声，无音乐。`
 
 ## Sequence Continuation Example
 

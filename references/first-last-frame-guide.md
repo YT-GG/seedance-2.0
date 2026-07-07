@@ -12,12 +12,12 @@ The first frame defines where the clip begins. The last frame defines the target
 
 ## Reference Roles
 
-| Role | English wording | Chinese wording | Russian wording |
-|---|---|---|---|
-| First frame | `[Image1] is the first frame.` | `@图1 为首帧。` | `[Image1] как первый кадр.` |
-| Last frame | `[Image2] is the last frame.` | `@图2 为尾帧。` | `[Image2] как последний кадр.` |
-| Identity lock | `Preserve the same subject identity, outfit, shape, and scene logic.` | `保持同一主体、服装、形状和场景逻辑。` | `Сохранить того же персонажа, одежду, форму и логику сцены.` |
-| Transition only | `Generate only the motion between the two frames.` | `只生成两帧之间的连续动作。` | `Сгенерировать только переход между кадрами.` |
+| Role | Chinese wording |
+|---|---|
+| First frame | `@图1 为首帧。` |
+| Last frame | `@图2 为尾帧。` |
+| Identity lock | `保持同一主体、服装、形状和场景逻辑。` |
+| Transition only | `只生成两帧之间的连续动作。` |
 
 ## Surface Field Notes
 

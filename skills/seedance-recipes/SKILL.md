@@ -23,7 +23,7 @@ metadata:
 
 Use recipes as starting patterns, not rigid prompt templates. Pick the recipe that matches the user's outcome, then customize subject, action, camera, lighting, audio, and constraints. Recipes should preserve the one-beat discipline of a short clip.
 
-Load `[ref:genre-guides]` for genre patterns, `[ref:examples-by-mode]` when the user needs copy-ready examples, `[ref:shot-list-continuity]` for professional multi-shot sequences or commercials, and `[ref:multilingual-community-examples]` when the recipe should reflect Chinese/Russian/Japanese/Korean/Spanish community-style structures.
+Load `[ref:genre-guides]` for genre patterns, `[ref:examples-by-mode]` when the user needs copy-ready examples, and `[ref:shot-list-continuity]` for professional multi-shot sequences or commercials. For Chinese wording, load `[skill:seedance-vocab-zh]`.
 
 ## Intent
 

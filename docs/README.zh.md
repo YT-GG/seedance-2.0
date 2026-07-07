@@ -1,46 +1,38 @@
-# Seedance 2.0 Skill OS 中文指南
+# Seedance 2.0 中文指南
 
-这是 v6.6.0 的中文入口。它不是英文 README 的逐字翻译，而是给中文创作者、提示词作者、剪辑和交付团队使用的工作指南。
+这是当前中文精简版的文档入口。完整步骤见根目录的 [zh-USAGE.md](../zh-USAGE.md)，快速版见 [zh-QUICKSTART.md](../zh-QUICKSTART.md)。
 
-## 先从哪里开始
+## 使用方式
 
-| 你要做什么 | 先打开 |
-|---|---|
-| 写中文提示词 | `skills/seedance-vocab-zh/SKILL.md` 和 `references/vocab/zh.md` |
-| 看中文范例 | `skills/seedance-examples-zh/SKILL.md` |
-| 做三段以上连续剧情 | `skills/seedance-sequence/SKILL.md` |
-| 接着上一段视频继续拍 | `skills/seedance-continuation/SKILL.md` |
-| 有图片、视频、音频参考 | `references/reference-workflow.md` |
-| 首帧/尾帧控制 | `references/first-last-frame-guide.md` |
+本项目推荐安装到 Codex 后作为 `$seedance-20` skill 使用。VS Code 主要用于查看、编辑和运行验证脚本，不需要启动网页服务。
 
 ## 中文提示词规则
 
-- 不翻译参考标签：`[Image1]`、`[Video1]`、`[Audio1]`、`@图1`、`@视频1` 必须原样保留。
-- 先写参考角色，再写动作、镜头、光线、声音。
-- 不用空泛词堆质量，例如“电影感”“高级感”“氛围感”。要拆成景别、运镜、光源、材质、色彩、空气。
-- 不让模型生成最终字幕、广告文案、法务文案；这些在剪辑或交付阶段添加。
-- 连续剧情不要一次写完整结局。先生成 Clip 01，再用真实结尾写 Clip 02。
+- 参考标签保持原样：`[Image1]`、`[Video1]`、`[Audio1]`、`@图1`、`@视频1` 不要翻译或改名。
+- 先写参考素材的角色，再写主体动作、镜头、光线、声音和限制。
+- 少用“电影感”“高级感”“氛围感”等空词，把它们拆成景别、运镜、光源、材质、色彩、空气和声音。
+- 不让模型生成最终字幕、广告语、法务文案或水印，这些应在后期添加。
+- 长故事先生成 Clip 01，再根据真实结尾写 Clip 02。
 
-## 连续剧情模板
+## 常用入口
+
+| 你要做什么 | 先看 |
+|---|---|
+| 写中文提示词 | `skills/seedance-vocab-zh/SKILL.md` 和 `references/vocab/zh.md` |
+| 看中文范例 | `skills/seedance-examples-zh/SKILL.md` |
+| 做连续剧情 | `skills/seedance-sequence/SKILL.md` |
+| 接着上一段继续 | `skills/seedance-continuation/SKILL.md` |
+| 使用参考图片/视频/音频 | `references/reference-workflow.md` |
+| 控制首帧/尾帧 | `references/first-last-frame-guide.md` |
+
+## 中文模板
 
 ```text
-项目目标：[故事最终要到达的结果]
-已发生：[已经被接受的视频事实]
-本段只拍：[本 clip 的一个可见任务]
-不能提前出现：[保留到后面 clip 的内容]
-参考：[Image1] 锁定主体；[Video1] 仅参考运镜；[Audio1] 仅参考节奏
-提示词：[一个动作 + 一个镜头 + 真实光线 + 声音]
+项目目标：[最终想让观众看到或感受到什么]
+参考素材：[Image1] 锁定主体；[Video1] 仅参考运镜；[Audio1] 仅参考节奏
+本段只拍：[一个可见动作]
+镜头：[固定/推近/侧移/跟拍，只选一个主运动]
+光线：[真实光源、方向、变化]
+声音：[环境声/动作声/台词/无音乐]
+限制：[不改主体、不新增文字、不生成水印、不提前出现后续剧情]
 ```
-
-## 中文范例
-
-```text
-[Image1]为产品参考，严格保持logo、标签、瓶身形状和颜色不变。
-仅改变光线和微小动作：左侧暖色条形光扫过玻璃，水珠沿瓶身缓慢下滑。
-镜头固定产品近景，轻微推镜到标签。声音：低环境声，结尾一声轻微玻璃声。
-不要新增字幕、水印或无关文字。
-```
-
-## 安全改写
-
-如果用户写了受保护角色、明星、品牌、歌曲、真实人物脸或声音，不要换一种语言隐藏它。保留创意功能，改成原创角色、原创世界、已授权参考或后期替代方案。

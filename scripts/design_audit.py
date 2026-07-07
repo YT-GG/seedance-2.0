@@ -79,48 +79,39 @@ def main() -> int:
         if long_lines:
             errors.append("README.md has lines over 500 chars: " + ", ".join(map(str, long_lines[:10])))
         for required in [
-            "assets/hero-command-center.png",
-            "assets/hero-global-filmmaker-mode.png",
-            "assets/skill-os-infographic.png",
-            "assets/skill-map-cinematic.png",
-            "## What This Skill Does",
-            "## Professional Filmmaker Scope",
-            "## Operating System At A Glance",
-            "## Visual Gallery",
-            "### Hero Shots",
-            "### Text-Rich Infographics",
-            "CDN video delivery map",
-            "What this skill can do",
-            "Professional QC stack",
-            "## Start Here",
-            "## Native Language Start",
+            "# Seedance 2.0 Skill OS 中文精简版",
+            "zh-QUICKSTART.md",
+            "zh-USAGE.md",
             "docs/README.zh.md",
+            "## 应该在 Codex 里用，还是在 VS Code 里跑",
+            "## 快速安装到 Codex",
+            "## 这个项目能做什么",
+            "## 中文精简后的结构",
+            "## 最小使用流程",
+            "## 本次精简移除了什么",
+            "## 维护时常用检查",
+            "skills/seedance-vocab-zh",
+            "skills/seedance-examples-zh",
+            "references/vocab/zh.md",
+            "python scripts/install_codex_skill.py --force",
+            "$seedance-20",
+        ]:
+            if required not in text:
+                errors.append(f"README.md missing `{required}`")
+        forbidden = [
             "docs/README.ja.md",
             "docs/README.ko.md",
             "seedance-examples-ja",
             "seedance-examples-ko",
-            "## Skill Map",
-            "api-workflow.md",
-            "pro-filmmaking-standards.md",
-            "delivery-qc.md",
-            "examples-by-mode.md",
-            "multilingual-community-examples.md",
-            "## Validation",
-            "## Design Standard",
-            "<picture>",
-            "prefers-color-scheme",
-            "assets/hero-dark.svg",
-            "assets/hero-light.svg",
-            "assets/skill-map.svg",
-        ]:
-            if required not in text:
-                errors.append(f"README.md missing `{required}`")
-        gallery_count = sum(1 for rel in GALLERY_ASSETS if rel in text)
-        if gallery_count < 6:
-            errors.append(f"README.md must reference at least six visual-gallery PNG assets ({gallery_count} found)")
-        for rel in GALLERY_ASSETS:
-            if rel not in text:
-                errors.append(f"README.md missing gallery asset `{rel}`")
+            "seedance-vocab-ja",
+            "seedance-vocab-ko",
+            "seedance-vocab-es",
+            "seedance-vocab-ru",
+            "references/multilingual-community-examples.md",
+        ]
+        for token in forbidden:
+            if token in text:
+                errors.append(f"README.md still references removed translation entry `{token}`")
 
     redesign_doc = root / "docs" / "frontend-redesign.md"
     if not redesign_doc.exists():

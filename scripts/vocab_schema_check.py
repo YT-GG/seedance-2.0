@@ -5,7 +5,7 @@ import argparse
 import re
 from pathlib import Path
 
-LANGS = ["en", "zh", "ru", "ja", "ko", "es"]
+LANGS = ["zh"]
 ALLOWED_FUNCTIONS = {
     "Role", "FirstLastFrame", "Camera", "Shot", "Lens", "Lighting", "Motion",
     "VFX", "Audio", "Text", "Editing", "Constraint", "Constraints", "Safety",

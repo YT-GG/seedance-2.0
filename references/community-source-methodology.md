@@ -2,7 +2,7 @@
 
 last_verified: 2026-05-30
 
-Use this when mining prompt corpora, forums, Reddit posts, Chinese guides, Russian guides, or wrapper documentation.
+Use this when mining prompt corpora, forums, Reddit posts, Chinese guides, or wrapper documentation.
 
 ## Allowed Extraction
 

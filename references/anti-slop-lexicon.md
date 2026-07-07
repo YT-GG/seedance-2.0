@@ -44,4 +44,4 @@ Naming a flaw plants it. Instead of `no blur, no extra fingers, no watermark tex
 
 Rule: if a camera, microphone, light meter, or stopwatch cannot detect it, rewrite it.
 
-Each language file in `references/vocab/` carries a Slop Traps table for its own community's empty words: English (`vocab/en.md`), Chinese (`vocab/zh.md`), Japanese (`vocab/ja.md`), Korean (`vocab/ko.md`), Spanish (`vocab/es.md`), Russian (`vocab/ru.md`).
+The active simplified package keeps the Chinese Slop Traps table in `references/vocab/zh.md`. Use it to turn empty Chinese quality words into visible production choices.
